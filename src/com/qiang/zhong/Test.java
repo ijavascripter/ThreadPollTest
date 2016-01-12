@@ -10,6 +10,7 @@ public class Test {
 		manager.addArrTask(createTask());
 		Thread.sleep(2000);
 		manager.destory();
+		//********************************************************s
 	
 	}
 	public static List<TaskLoad> createTask(){

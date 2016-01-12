@@ -10,10 +10,17 @@ public class ThreadPollManager {
 	private WorkThread[] works;
 	private int workCount;
 
+	
+	
+	
+	
 	private ThreadPollManager() {
 		this(5);
 	}
 
+	
+	
+	
 	private ThreadPollManager(int threadCount) {
 		this.workCount = threadCount;
 		works = new WorkThread[threadCount];
@@ -22,6 +29,9 @@ public class ThreadPollManager {
 		}
 	}
 
+	
+	
+	
 	public static ThreadPollManager getInstance() {
 		if (instance == null) {
 			instance = new ThreadPollManager();
@@ -29,6 +39,9 @@ public class ThreadPollManager {
 		return instance;
 	}
 
+	
+	
+	
 	public void addTask(TaskLoad task) {
 		synchronized (list) {
 
@@ -39,6 +52,11 @@ public class ThreadPollManager {
 		}
 	}
 
+	
+	
+	
+	
+	
 	public void addArrTask(List<TaskLoad> lists) {
 		synchronized (list) {
 
@@ -49,6 +67,12 @@ public class ThreadPollManager {
 		}
 	}
 
+	
+	
+	
+	
+	
+	
 	public void destory() {
 		for (int i = 0; i < works.length; i++) {
 			works[i].stopRun();
